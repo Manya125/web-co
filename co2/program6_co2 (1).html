@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>exame mark</title>
+
+</head>
+<body>
+    ADD 2+5:<br>
+    <input type="radio" name="q1o1" id="op1">7
+    <input type="radio" name="q1o1"> 3
+    <input type="radio" name="q1o1">6<br>
+    Colour of sunflower:<br>
+    <input type="radio" name="q2o1">Red
+    <input type="radio" name="q2o1" id="o2">Yellow
+    <input type="radio" name="q2o1">Rose<br>
+    What is part of a database that holds only one type of information?
+<br>
+    <input type="radio" name="q3o1">Report
+    <input type="radio" name="q3o1" id="o3">Field
+    <input type="radio" name="q3o1">Record<br>
+     '.INI' extension refers usually to what kind of file?
+<br>
+    <input type="radio" name="q4o1">Image file
+    <input type="radio" name="q4o1" id="o4">System file
+    <input type="radio" name="q4o1">Hypertext related file<br>
+     What is a URL?
+<br>
+    <input type="radio" name="q5o1">A type of UFO
+    <input type="radio" name="q5o1" id="o5">The address of a document or "page" on the World Wide Web
+    <input type="radio" name="q5o1"> A computer software program<br>
+  
+   <td><button onclick="mark()">submit</button></td>
+    
+<script>
+    function mark()
+    {
+       var m=0;
+       if(document.getElementById("op1").checked)
+       {
+           m++;
+       }
+       if(document.getElementById("o2").checked)
+       {
+           m++;
+       }
+       if(document.getElementById("o3").checked)
+       {
+           m++;
+       }
+       if(document.getElementById("o4").checked)
+       {
+           m++;
+       }
+       if(document.getElementById("o5").checked)
+       {
+           m++;
+       }
+        
+        document.write("mark=",m);
+
+    }
+</script>
+</body>
+</html>

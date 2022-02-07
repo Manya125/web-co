@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>string and math functions</title>
+<script>
+    function striing()
+    {
+        s1=document.getElementById("str").value;
+        len=s1.length;
+        document.getElementById("len").value=len;//lenth
+        
+        a=document.getElementById("n1").value;
+        b=document.getElementById("n2").value;
+        slicee=s1.slice(a,b);
+        document.getElementById("slicee").value=slicee;//slicing
+    
+
+        m=document.getElementById("no1").value;
+        n=document.getElementById("no2").value;
+        substrng=s1.substring(m,n);
+        document.getElementById("substrng").value=substrng;//substring
+
+        j=document.getElementById("nu1").value;
+        k=document.getElementById("nu2").value;
+        substrr=s1.substr(j,k);
+        document.getElementById("substrr").value=substrr;//substr
+
+        x=document.getElementById("w1").value;
+        y=document.getElementById("w2").value;
+        rplc=s1.replace(x,y);
+        rplc=document.getElementById("rplc").value=rplc;//replace
+
+        up=s1.toUpperCase();
+        up=document.getElementById("up").value=up;//uppercase
+        
+        low=s1.toLowerCase();
+        low=document.getElementById("low").value=low;//lowercase
+
+        co1=document.getElementById("t1").value;
+        cont=s1.concat(" ",co1);
+        cont=document.getElementById("cont").value=cont;//concat
+
+        rev=s1.split('').reverse().join('');
+        rev=document.getElementById("rev").value=rev;
+        
+    }
+
+//math functions
+    function roundd()
+    {
+        aa=document.getElementById("numm1").value;
+        resultt=Math.round(aa);
+        resultt=document.getElementById("resultt").value=resultt;
+    }
+    function poww()
+    {
+        aa=document.getElementById("numm1").value;
+        resultt=Math.pow(aa, 2); 
+        resultt=document.getElementById("resultt").value=resultt;
+    }
+    function logg()
+    {
+        aa=document.getElementById("numm1").value;
+        resultt=Math.log(aa); 
+        resultt=document.getElementById("resultt").value=resultt;
+    }
+    function sqrtt()
+    {
+        aa=document.getElementById("numm1").value;
+        resultt=Math.sqrt(aa);
+        resultt=document.getElementById("resultt").value=resultt;
+    }
+    function floorr()
+    {
+        aa=document.getElementById("numm1").value;
+        resultt=Math.floor(aa);
+        resultt=document.getElementById("resultt").value=resultt;
+    }
+    function ceill()
+    {
+        aa=document.getElementById("numm1").value;
+        resultt=Math.ceil(aa);
+        resultt=document.getElementById("resultt").value=resultt;
+    }
+</script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr>
+            <td align="center">   
+            <h1>STRING FUNCTIONS</h1></td>
+            <td align="center" colspan="2">
+            <h1>RESULT</h1></td>
+        </tr>
+        <tr>
+            <td>
+            Enter String:<textarea rows="1" cols="50" placeholder="Enter string" id="str">
+            </textarea><br></td>
+            <td>Length:</td>
+            <td><input type="text" id="len"></td>
+        </tr>
+        <tr>
+            <td>Slice:
+            <input type="number" id="n1" placeholder="num1">
+            <input type="number" id="n2" placeholder="num2"></td>
+            <td>sliced string</td>
+            <td><input type="text" id="slicee" placeholder="slicedstring"></td>
+        </tr>
+        <tr>
+            <td>Substring:
+            <input type="number" id="no1" placeholder="num1">
+            <input type="number" id="no2" placeholder="num2"></td>
+            <td>Substring string</td>
+            <td><input type="text" id="substrng" placeholder="substringslice"></td>
+        </tr>
+        <tr>
+            <td>Substr:
+            <input type="number" id="nu1" placeholder="num1">
+            <input type="number" id="nu2" placeholder="num2"></td>
+            <td>substr string</td>
+            <td><input type="text" id="substrr" placeholder="substrslice"></td>
+        </tr>
+        <tr>
+            <td>Replace:
+            <input type="text" id="w1" placeholder="word">
+            <input type="text" id="w2" placeholder="newword"></td><td>replaced string</td>
+            <td><input type="text" id="rplc" placeholder="replacedstring"></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Concat:
+            <input type="text" id="t1" placeholder="text1"></td>
+            <td>concated string</td>
+            <td><input type="text" id="cont" placeholder="concated text"></td>
+        </tr>
+        <tr>
+            <td>Uppercase</td>
+            <td><input type="text" id="up" placeholder="Uppercase Text"></td>
+        </tr>
+        <tr>
+            <td>LowerCase:</td>
+            <td><input type="text" id="low" placeholder="Lowercase Text"></td>
+        </tr>
+        <tr>
+            <td>Reverse:</td>
+            <td><input type="text" id="rev" placeholder="reversed text"></td>
+        </tr>
+        <tr>
+            <td><button onclick="striing()">submit</button></td>
+        </tr>
+</table>
+<table border="1" align="center">
+    <tr>
+        <td align="center"><h1>MATH FUCTIONS</h1></td>
+    </tr>
+    <tr>
+        <td> Num1:<input type="number" id="numm1" value="numm1"></td>
+    </tr>
+    <tr>
+        <td><button onclick="roundd()">round</button>
+            <button onclick="poww()">pow</button>
+            <button onclick="sqrtt()">sqrt</button>
+            <button onclick="logg()">log</button>
+            <button onclick="ceill()">ceil</button>
+            <button onclick="floorr()">floor</button>
+        </td>
+    </tr>
+    <tr>
+        <td> Result<input type="text" id="resultt"></td>
+    </table>
+</body>
+</html>

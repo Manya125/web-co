@@ -1,0 +1,159 @@
+<html>
+<head>
+  <style>
+body{
+    background:  url("img1.jpg");
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+  <title></title>
+<script type="text/javascript">
+      function validate()
+
+      {
+        
+        
+        if(document.myform.aname.value=="")
+        {
+          alert("Enter your name");
+          document.myform.aname.focus();
+          return false;
+        }    //name 
+
+        if(document.myform.aaddress.value=="")
+        {
+          alert("Enter your address");
+          document.myform.aaddress.focus();
+          return false;
+        }   //address
+
+        if(document.myform.aage.value=="")
+        {
+          alert("Enter your age");
+          document.myform.aage.focus();
+          return false;
+        }   //age
+        
+        if(document.myform.adob.value=="")
+        {
+          alert("Enter your date of birth");
+          document.myform.adob.focus();
+          return false;
+        } //dob
+
+        if(document.myform.aphoneno.value=="")
+        {
+          alert("Enter your phone number");
+          document.myform.aphoneno.focus();
+          return false;
+        }
+        else if(document.myform.aphoneno.value.length!=10)
+        {
+          alert("Please check phone number and enter correctly");
+          document.myform.aphoneno.focus();
+          return false;
+        }  //phoneno
+
+        if(document.myform.aemail.value=="")
+        {
+          alert("Enter your email id");
+          document.myform.aemail.focus();
+          return false;
+        }
+
+        
+        if(document.myform.apassword.value=="")
+        {
+          alert("Enter password");
+          document.myform.apassword.focus();
+          return false;
+        }
+       
+      if(document.myform.apassword.value.length!=8)
+        {
+          alert("Your password is incorrect please enter your username correctly");
+          document.myform.apassword.focus();
+          return false;
+        }
+        return true;
+     
+      }  
+    </script>
+  </head>
+  <body text="black">
+
+    <center>
+  <h1><font color="black" face="algerian">Registration Form</font></b></h1>
+
+  <form name="myform" action="loginadminchk.php" method="POST" onsubmit="return(validate());">
+    <font color="black">
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name="aname"></td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><input type="text" name="aaddress"></td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td><input type="number" name="aage"></td>
+      </tr>
+      <tr>
+        <td>DOB:</td>
+        <td><input type="date" name="adob"></td>
+      </tr>
+      <tr>
+        <td>Phone.No:</td>
+        <td><input type="number" name="aphoneno"></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" name="aemail"></td>
+      </tr>
+      <tr>
+        <td>GENDER:</td>
+        <td>MALE<input type="radio" id="html" name="agender" value="MALE">
+                FEMALE<input type="radio" id="html" name="agender" value="FEMALE" checked="true"></td>
+      </tr>
+      <tr>
+          <td>STATE:</td>
+          <td>
+            <select name="astate">
+                <option selected="" value="default">Please select a state</option>
+                <option value="kerala">KERALA</option>
+                <option value="tamilnadu">TAMILNADU</option>
+                <option value="karnataka">KARNATAKA</option>
+                <option value="assam">ASSAM</option>
+                <option value="maharashtra">MAHARASHTRA</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+          <td>LANGUAGE KNOWN:</td>
+          <td><input type="checkbox"  name="al1" value="m">C++<br>
+            <input type="checkbox"  name="al2" value="m2">java<br>
+            <input type="checkbox"  name="al4" value="m4">php<br>
+            <input type="checkbox"  name="al3" value="m3">python</td>
+        </tr>
+    
+      <tr>
+        <td>Password</td>
+        <td><input type="password" name="apassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></td>
+      </tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>
+      <tr>
+        <td></td>
+
+        <td><input type="submit" value="Ok"></td>
+      </tr>
+    </table>
+  </font>
+  </form>
+</font>
+</center>
+</body></html>
